@@ -15,6 +15,8 @@ public class WebDriverProvider {
         Configuration.browserSize = config.getBrowserSize();
         Configuration.baseUrl = config.getBaseUrl();
         Configuration.pageLoadStrategy = "eager";
+       // Configuration.remote = "https://user1:1234@" + System.getProperty("selenoid_url", "selenoid.autotests.cloud/wd/hub");
+
 
         if (config.isRemote()) {
             Configuration.remote = WebDriverProvider.config.getRemoteUrl();
