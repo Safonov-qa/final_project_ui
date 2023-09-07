@@ -22,9 +22,9 @@ public interface WebDriverConfig extends Config {
     @DefaultValue("https://www.aeroflot.ru")
     String getBaseUrl();
 
-//    @Key("isRemote")
-//    @DefaultValue("false")
-//    Boolean isRemote();
+    @Key("isRemote")
+    @DefaultValue("false")
+    Boolean isRemote();
 
     @Key("remoteUrl")
     String getRemoteUrl();
