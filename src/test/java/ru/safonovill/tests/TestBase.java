@@ -6,6 +6,7 @@ import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import ru.safonovill.config.WebDriverProvider;
 import ru.safonovill.helpers.Attach;
@@ -16,13 +17,17 @@ public class TestBase {
     @BeforeAll
     static void configure() {
         WebDriverProvider.configuration();
-        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);
         capabilities.setCapability("enableVideo", true);
         Configuration.browserCapabilities = capabilities;
     }
+    @BeforeEach
+    void allureListener() {
+        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
+    }
+
 
     @AfterEach
     void addAttachments() {
