@@ -17,7 +17,7 @@ import static io.qameta.allure.Allure.step;
 @DisplayName("Проверка страницы поиска")
 @Tag("search_page_test")
 
-public class SearchPageTest {
+public class SearchPageTest extends TestBase{
     MainPage mainPage = new MainPage();
     SearchPage searchPage = new SearchPage();
 

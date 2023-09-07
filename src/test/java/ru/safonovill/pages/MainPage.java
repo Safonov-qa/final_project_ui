@@ -7,7 +7,7 @@ import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
-public class MainPage extends TestBase {
+public class MainPage {
 
     private final SelenideElement
 

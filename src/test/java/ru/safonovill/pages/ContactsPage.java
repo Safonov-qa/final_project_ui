@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.WebDriverConditions.currentFrameUrl;
 
-public class ContactsPage extends TestBase {
+public class ContactsPage {
     private final String
             CONTACTS_URL = "/about/contact",
             OFFICES_URL = "/offices";

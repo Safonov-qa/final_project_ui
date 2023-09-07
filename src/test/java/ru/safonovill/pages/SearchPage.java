@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.webdriver;
 import static com.codeborne.selenide.WebDriverConditions.currentFrameUrl;
 
-public class SearchPage extends TestBase {
+public class SearchPage {
 
     private final String
             SEARCH_URL = "/search";
