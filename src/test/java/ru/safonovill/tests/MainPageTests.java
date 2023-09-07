@@ -1,10 +1,10 @@
-package ru.SafonovIll.tests;
+package ru.safonovill.tests;
 
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
 import org.junit.jupiter.api.*;
-import ru.SafonovIll.pages.MainPage;
+import ru.safonovill.pages.MainPage;
 
 import static io.qameta.allure.Allure.step;
 

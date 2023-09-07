@@ -1,8 +1,8 @@
-package ru.SafonovIll.pages;
+package ru.safonovill.pages;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
-import ru.SafonovIll.tests.TestBase;
+import ru.safonovill.tests.TestBase;
 
 import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Selenide.$;

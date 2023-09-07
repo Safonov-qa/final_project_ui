@@ -1,4 +1,4 @@
-package ru.SafonovIll.pages;
+package ru.safonovill.pages;
 
 import com.codeborne.selenide.SelenideElement;
 

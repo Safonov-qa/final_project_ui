@@ -1,4 +1,4 @@
-package ru.SafonovIll.tests;
+package ru.safonovill.tests;
 
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
@@ -6,8 +6,8 @@ import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import ru.SafonovIll.pages.ContactsPage;
-import ru.SafonovIll.pages.MainPage;
+import ru.safonovill.pages.ContactsPage;
+import ru.safonovill.pages.MainPage;
 import static io.qameta.allure.Allure.step;
 
 @Story("Проверка работы сайта Аэрофлот")

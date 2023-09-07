@@ -1,4 +1,4 @@
-package ru.SafonovIll.config;
+package ru.safonovill.config;
 
 import org.aeonbits.owner.Config;
 
