@@ -11,6 +11,8 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import ru.safonovill.config.WebDriverProvider;
 import ru.safonovill.helpers.Attach;
 
+import java.util.Map;
+
 
 public class TestBase {
 
@@ -19,8 +21,10 @@ public class TestBase {
         WebDriverProvider.configuration();
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("enableVNC", true);
-        capabilities.setCapability("enableVideo", true);
+        capabilities.setCapability("selenoid:options", Map.<String, Object>of(
+                "enableVNC", true,
+                "enableVideo", true
+        ));
         Configuration.browserCapabilities = capabilities;
     }
     @BeforeEach
