@@ -12,9 +12,10 @@ import static com.codeborne.selenide.WebDriverConditions.currentFrameUrl;
 public class SearchPage {
 
     private final String
-            SEARCH_URL = "/search";
+            SEARCH_URL = "ru-ru/search";
     private final SelenideElement
-            searchButton = $(".main-module__header__search"),
+            searchButton = $("[title='Поиск по сайту']"),
+           // $(".main-module__header__search"),
             input = $("#search"),
             result = $("#ya-site-results");
 

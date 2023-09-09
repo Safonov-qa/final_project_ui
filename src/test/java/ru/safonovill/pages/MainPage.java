@@ -1,6 +1,5 @@
 package ru.safonovill.pages;
 
-import ru.safonovill.tests.TestBase;
 import com.codeborne.selenide.SelenideElement;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Configuration.baseUrl;
@@ -11,7 +10,7 @@ public class MainPage {
 
     private final SelenideElement
 
-            logoCompany = $(".main-module__header__logo-wrapper"),
+            logoCompany = $(".main-module__img.main-module__header__logo"),
             headers = $("#site-navigation"),
             mainModule = $(".main-module__wrapper"),
             blockOfService = $("[role='main']"),

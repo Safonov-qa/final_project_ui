@@ -11,8 +11,8 @@ import static com.codeborne.selenide.WebDriverConditions.currentFrameUrl;
 
 public class ContactsPage {
     private final String
-            CONTACTS_URL = "/about/contact",
-            OFFICES_URL = "/offices";
+            CONTACTS_URL = "ru-ru/about/contact",
+            OFFICES_URL = "ru-ru/offices";
     private final SelenideElement
             contacts = $(".main-module__footer__link.main-module__footer__submenu-item-link"),
             iconContacts = $("[href='https://www.aeroflot.ru/ru-ru/about/contact']"),

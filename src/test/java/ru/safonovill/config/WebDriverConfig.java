@@ -19,7 +19,7 @@ public interface WebDriverConfig extends Config {
     String getBrowserSize();
 
     @Key("baseUrl")
-    @DefaultValue("https://www.aeroflot.ru")
+    @DefaultValue("https://www.aeroflot.ru/")
     String getBaseUrl();
 
     @Key("isRemote")

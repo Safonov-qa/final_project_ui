@@ -22,7 +22,7 @@ public class BuyTicketTest extends TestBase {
     BuyTicketPage buyTicketPage = new BuyTicketPage();
 
     @DisplayName("Проверка содержания страницы покупки билета")
-    @ValueSource(strings = {"Пхукет", "Санкт-Петербург", "Мале"})
+    @ValueSource(strings = {"Пхукет", "Ларнака", "Мале"})
     @ParameterizedTest(name = "Проверка наличия билетов из Москвы в {0}")
     void checkPageBuyTicketTest(String to) {
         step("Открыть главную страницу", () ->
