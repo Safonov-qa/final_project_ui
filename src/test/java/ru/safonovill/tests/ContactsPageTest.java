@@ -13,7 +13,7 @@ import static io.qameta.allure.Allure.step;
 @Story("Проверка работы сайта Аэрофлот")
 @Owner("SafonovIll")
 @Feature("UI тесты на проверку содержания разделов сайта Аэрофлот")
-@DisplayName("Проверка страницы контактов")
+@DisplayName("Страница контактов")
 @Tag("contacts_page_test")
 
 public class ContactsPageTest extends TestBase {
@@ -25,6 +25,8 @@ public class ContactsPageTest extends TestBase {
     void checkOfficeLocationTest() {
         step("Открыть главную страницу", () ->
                 mainPage.openMain());
+        step("Закрыть всплывающее окно", () ->
+                mainPage.closeWindow());
         step("Пролистать страницу до контаков", () ->
                 contactsPage.scrollToContacts());
         step("Кликнуть на кнопку 'Контакты'", () ->

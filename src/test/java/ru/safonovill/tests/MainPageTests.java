@@ -11,7 +11,7 @@ import static io.qameta.allure.Allure.step;
 @Story("Проверка работы сайта Аэрофлот")
 @Owner("SafonovIll")
 @Feature("UI тесты на проверку содержания разделов сайта Аэрофлот")
-@DisplayName("Проверка главной страницы")
+@DisplayName("Главная страница")
 @Tag("main_page_test")
 
 public class MainPageTests extends TestBase {
@@ -21,6 +21,11 @@ public class MainPageTests extends TestBase {
     public void openMainPage() {
         step("Открыть главную страницу", () ->
                 mainPage.openMain());
+    }
+    @BeforeEach
+    public void closePopUpWindow() {
+        step("Закрыть всплывающее окно", () ->
+        mainPage.closeWindow());
     }
 
     @Test

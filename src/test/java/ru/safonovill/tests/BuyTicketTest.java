@@ -14,19 +14,21 @@ import static io.qameta.allure.Allure.step;
 @Story("Проверка работы сайта Аэрофлот")
 @Owner("SafonovIll")
 @Feature("UI тесты на проверку содержания разделов сайта Аэрофлот")
-@DisplayName("Проверка страницы покупки билета")
+@DisplayName("Cтраница покупки билета")
 @Tag("buy_ticket_test")
 
 public class BuyTicketTest extends TestBase {
     MainPage mainPage = new MainPage();
     BuyTicketPage buyTicketPage = new BuyTicketPage();
 
-    @DisplayName("Проверка содержания страницы покупки билета")
+    @DisplayName("Содержание страницы покупки билета")
     @ValueSource(strings = {"Пхукет", "Ларнака", "Мале"})
-    @ParameterizedTest(name = "Проверка наличия билетов из Москвы в {0}")
+    @ParameterizedTest(name = "Наличие билетов из Москвы в {0}")
     void checkPageBuyTicketTest(String to) {
         step("Открыть главную страницу", () ->
                 mainPage.openMain());
+        step("Закрыть всплывающее окно", () ->
+                mainPage.closeWindow());
         step("Отображение меню покупки билета", () ->
                 buyTicketPage.checkMenuByToTicket());
         step("Наличие билетов", () ->

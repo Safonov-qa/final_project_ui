@@ -14,7 +14,7 @@ import static io.qameta.allure.Allure.step;
 @Story("Проверка работы сайта Аэрофлот")
 @Owner("SafonovIll")
 @Feature("UI тесты на проверку содержания разделов сайта Аэрофлот")
-@DisplayName("Проверка страницы поиска")
+@DisplayName("Страница поиска")
 @Tag("search_page_test")
 
 public class SearchPageTest extends TestBase{
@@ -28,6 +28,8 @@ public class SearchPageTest extends TestBase{
     void checkSearchResultsTest(String value) {
         step("Открыть главную страницу", () ->
                 mainPage.openMain());
+        step("Закрыть всплывающее окно", () ->
+                mainPage.closeWindow());
         step("Нажать на кнопку поиска", () ->
                 searchPage.buttonSearch());
         step("Проверить отображение страницы поиска", () ->

@@ -30,11 +30,18 @@ public class MainPage {
             information = $("[content='Информация']"),
             readyToTravel = $("[content='Подготовка к путешествию']"),
             forBusiness = $("[content='Для Бизнеса']"),
-            corporateClients = $("[content='Корпоративным клиентам']");
+            corporateClients = $("[content='Корпоративным клиентам']"),
+            windowClose = $(".button.button--wide.js-notification-close");
 
 
     public MainPage openMain() {
         open(baseUrl);
+
+        return this;
+    }
+
+    public MainPage closeWindow() {
+        windowClose.click();
 
         return this;
     }

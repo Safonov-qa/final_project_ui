@@ -50,13 +50,13 @@
 ### Локальный запуск тестов
 
 ```bash
-gradle clean test -Denv=local
+./gradlew clean test -Denv=local
 ```
 
 ### Удаленный запуск тестов
 
 ```bash
-gradle clean test -Denv=remote
+./gradlew clean test -Denv=remote
 "-Dbrowser=${BROWSER}" 
 "-DbrowserVersion=${BROWSER_VERSION}" 
 "-DbrowserSize=${BROWSER_SIZE}" 
@@ -78,18 +78,18 @@ gradle clean test -Denv=remote
 <a id="jenkins"></a>
 ## <img src="media/logo/Jenkins.svg" width="25" height="25"/></a> Запуск тестов в Jenkins
 
-<a target="_blank" href="https://jenkins.autotests.cloud/job/Students/job/final_project_ui_test ">Сборка в Jenkins</a>
+<a target="_blank" href="https://jenkins.autotests.cloud/job/final_project_ui/ ">Сборка в Jenkins</a>
 <p align="center">
 
 <p align="center">
-<a><img title="Jenkins Job" src="media/screenshots/jenkinsMain.jpg" alt="Jenkins"/></a>
+<a><img title="Jenkins Job" src="media/screenshots/JenkinsMain.png" alt="Jenkins"/></a>
 </p>
 
 <a target="_blank" href="https://jenkins.autotests.cloud/job/Students/job/final_project_ui_test/build ">Сборка с параметрами</a>
 <p align="center">
 
 <p align="center">
-<a><img src="media/screenshots/jenkinsBuildWithParams.jpg" alt="Jenkins"/></a>
+<a><img src="media/screenshots/JenkinsBuild.png" alt="Jenkins"/></a>
 </p>
 
 Из Jenkins возмжно перейти в Allure Report и Allure TestOps.
