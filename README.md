@@ -1,8 +1,8 @@
 
-<h1 >Проект автоматизации тестирования UI для сайта <a href="https://aeroflot.ru/ ">AEROFLOT</a></h1>
+<h1 >Проект автоматизации тестирования UI для сайта <a href="https://aeroflot.ru/ ">AEROFLOT </a> :airplane: </h1> 
 
 ![main_page.png](media/screenshots/main_page.png)
-
+ 
 ## :bookmark_tabs: Содержание
 
 * <a href="#tools">Технологии и инструменты</a>
