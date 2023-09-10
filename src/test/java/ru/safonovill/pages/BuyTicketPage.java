@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Selenide.$;
 public class BuyTicketPage {
     private final String DEPARTURE_CITY = "Москва";
     private final String DATE_FROM = "10.11.2023";
-    private final String DATE_TO = "30.11.2023";
+    private final String DATE_TO = "10.12.2023";
     private final SelenideElement
             ticketMenu = $("#adaptive-tabs_0"),
             fromFly = $("#ticket-city-departure-0-booking"),
@@ -31,8 +31,8 @@ public class BuyTicketPage {
         fromFly.doubleClick().setValue(DEPARTURE_CITY);
         toFly.doubleClick().setValue(to);
         dateFrom.doubleClick().setValue(DATE_FROM);
-        dateTo.doubleClick().setValue(DATE_TO);
-        numberOfPassengersButton.doubleClick();
+        dateTo.doubleClick().setValue(DATE_TO).pressEnter();
+        numberOfPassengersButton.click();
         addPassenger.click();
         closeButton.click();
         searchButton.click();

@@ -100,7 +100,7 @@
 ### Главная страница
 
 <p align="center">
-<img title="Allure Overview Dashboard" src="media/screenshots/allureReportMain.jpg">
+<img title="Allure Overview Dashboard" src="media/screenshots/AllureMain.png">
 </p>
 
 ### Тест-кейсы
@@ -108,34 +108,34 @@
 К каждому тест-кейсу прикреплен скриншот страницы последнего шага, логи и видео.
 
 <p align="center">
-<img title="Allure Tests" src="media/screenshots/allureReportSuites.jpg">
+<img title="Allure Tests" src="media/screenshots/AllureSuites.png">
 </p>
 
 <a id="allure-testops"></a>
-## <img src="media/logo/Allure_TO.svg" width="25" height="25"/></a> Интеграция с [Allure TestOps](https://allure.autotests.cloud/project/3317/dashboards)
+## <img src="media/logo/Allure_TO.svg" width="25" height="25"/></a> Интеграция с [Allure TestOps](https://allure.autotests.cloud/project/3649/dashboards)
 
 Интеграция Allure TestOps с Jenkins позволяет следить за выполнением прогона и управлять запуском тест-кейсов.
 
 ### Главная страница
 
 <p align="center">
-<img title="Allure TestOps" src="media/screenshots/testOpsDashboard.jpg">
+<img title="Allure TestOps" src="media/screenshots/TestOpsDashboard.png">
 </p>
 
 
 ### Тест-кейсы
 
 <p align="center">
-<img title="Allure TestOps" src="media/screenshots/testOpsTestCases.jpg">
+<img title="Allure TestOps" src="media/screenshots/TestOpsTestCases.png">
 </p>
 
 
 <a id="jira"></a>
-## <img src="media/logo/Jira.svg" width="25" height="25"/></a> Интеграция с [Jira](https://jira.autotests.cloud/browse/HOMEWORK-736)
+## <img src="media/logo/Jira.svg" width="25" height="25"/></a> Интеграция с [Jira](https://jira.autotests.cloud/browse/HOMEWORK-883)
 
 ### Интеграция Jira и Allure TestOps
 <p align="center">
-<img title="Jira" src="media/screenshots/jiraIntegration.jpg">
+<img title="Jira" src="media/screenshots/JiraScreen.png">
 </p>
 
 
@@ -143,13 +143,5 @@
 ## <img src="media/logo/Telegram.svg" width="25" height="25"/></a> Уведомления в Telegram с использованием бота
 
 <p >
-<img title="telegram bot" src="media/screenshots/telegramIntegration.jpg">
-</p>
-
-<a id="video"></a>
-## <img src="media/logo/Selenoid.svg" width="25" height="25"/></a> Пример прогона теста в Selenoid
-
-Видео к прохождению теста "Проверки локации "Москва" в списке офисов.
-<p align="center">
-  <img title="Selenoid Video" src="media/video/contactsTestVideo.gif">
+<img title="telegram bot" src="media/screenshots/TelegramScreen.png">
 </p>
