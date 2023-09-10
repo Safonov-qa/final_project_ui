@@ -2,7 +2,6 @@ package ru.safonovill.pages;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
-import ru.safonovill.tests.TestBase;
 
 import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Selenide.$;
@@ -15,7 +14,6 @@ public class SearchPage {
             SEARCH_URL = "ru-ru/search";
     private final SelenideElement
             searchButton = $("[title='Поиск по сайту']"),
-           // $(".main-module__header__search"),
             input = $("#search"),
             result = $("#ya-site-results");
 
