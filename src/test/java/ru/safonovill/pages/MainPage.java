@@ -10,29 +10,27 @@ import static com.codeborne.selenide.Selenide.open;
 public class MainPage {
 
     private final SelenideElement
-
             logoCompany = $(".main-module__img.main-module__header__logo"),
             headers = $("#site-navigation"),
             mainModule = $(".main-module__wrapper"),
             blockOfService = $("[role='main']"),
-            specialOffer = $(".main-module__special-offer.main-module__order-1--below-tablet"),
+            specialOfferButton = $(".main-module__special-offer.main-module__order-1--below-tablet"),
             additionalService = $("[data-slick='[object Object]']"),
             blockCompany = $(".main-module__frame__container"),
-            news = $(".main-module__row.main-module__order-1--below-tablet"),
-            exclusive = $("[href='https://open.zvuk.com/cLQ0/1o084ott']"),
+            newsButton = $(".main-module__row.main-module__order-1--below-tablet"),
+            exclusiveButton = $("[href='https://open.zvuk.com/cLQ0/1o084ott']"),
             downMenu = $(".main-module__row.main-module__footer__top"),
-            services = $("[content='Сервисы и услуги']"),
+            servicesButton = $("[content='Сервисы и услуги']"),
             contentByToTicket = $("[content='Купить билет']"),
             hoverSpecialOffer = $("[content='Спецпредложения']"),
-            bestSale = $("[content='Лучшие тарифы и акции']"),
+            bestSaleButton = $("[content='Лучшие тарифы и акции']"),
             aeroFlotBonus = $("[content='Аэрофлот Бонус']"),
             joinInProgram = $("[content='Вступить в программу']"),
-            information = $("[content='Информация']"),
+            informationButton = $("[content='Информация']"),
             readyToTravel = $("[content='Подготовка к путешествию']"),
-            forBusiness = $("[content='Для Бизнеса']"),
+            forBusinessButton = $("[content='Для Бизнеса']"),
             corporateClients = $("[content='Корпоративным клиентам']"),
             windowClose = $(".button.button--wide.js-notification-close");
-
 
     public MainPage openMain() {
         open(baseUrl);
@@ -72,8 +70,8 @@ public class MainPage {
     }
 
     public MainPage checkSpecialOffer() {
-        specialOffer.scrollTo();
-        specialOffer.shouldBe(visible);
+        specialOfferButton.scrollTo();
+        specialOfferButton.shouldBe(visible);
 
         return this;
     }
@@ -93,15 +91,15 @@ public class MainPage {
     }
 
     public MainPage checkNews() {
-        news.scrollTo();
-        news.shouldBe(visible);
+        newsButton.scrollTo();
+        newsButton.shouldBe(visible);
 
         return this;
     }
 
     public MainPage checkExclusive() {
-        exclusive.scrollTo();
-        exclusive.shouldBe(visible);
+        exclusiveButton.scrollTo();
+        exclusiveButton.shouldBe(visible);
         return this;
     }
 
@@ -113,7 +111,7 @@ public class MainPage {
     }
 
     public MainPage checkService() {
-        services.hover();
+        servicesButton.hover();
         contentByToTicket.shouldBe(visible);
 
         return this;
@@ -121,7 +119,7 @@ public class MainPage {
 
     public MainPage checkWindowSpecialOffer() {
         hoverSpecialOffer.hover();
-        bestSale.shouldBe(visible);
+        bestSaleButton.shouldBe(visible);
 
         return this;
     }
@@ -134,17 +132,16 @@ public class MainPage {
     }
 
     public MainPage checkInformation() {
-        information.hover();
+        informationButton.hover();
         readyToTravel.shouldBe(visible);
 
         return this;
     }
 
     public MainPage checkForBusiness() {
-        forBusiness.hover();
+        forBusinessButton.hover();
         corporateClients.shouldBe(visible);
 
         return this;
     }
-
 }

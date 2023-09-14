@@ -16,10 +16,9 @@ import static io.qameta.allure.Allure.step;
 @Feature("UI тесты на проверку содержания разделов сайта Аэрофлот")
 @DisplayName("Cтраница покупки билета")
 @Tag("buy_ticket_test")
-
 public class BuyTicketTest extends TestBase {
-    MainPage mainPage = new MainPage();
-    BuyTicketPage buyTicketPage = new BuyTicketPage();
+   private MainPage mainPage = new MainPage();
+   private BuyTicketPage buyTicketPage = new BuyTicketPage();
 
     @DisplayName("Содержание страницы покупки билета")
     @ValueSource(strings = {"Астана", "Ларнака", "Абу-Даби"})
@@ -29,11 +28,9 @@ public class BuyTicketTest extends TestBase {
                 mainPage.openMain());
         step("Закрыть всплывающее окно", () ->
                 mainPage.closeWindow());
-        step("Отображение меню покупки билета", () ->
+        step("Проверка отображения меню покупки билета", () ->
                 buyTicketPage.checkMenuByToTicket());
-        step("Наличие билетов", () ->
+        step("Проверка наличия билетов", () ->
                 buyTicketPage.checkSearchTicket(to));
-
     }
-
 }

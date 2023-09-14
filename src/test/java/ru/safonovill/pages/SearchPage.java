@@ -9,14 +9,12 @@ import static com.codeborne.selenide.Selenide.webdriver;
 import static com.codeborne.selenide.WebDriverConditions.currentFrameUrl;
 
 public class SearchPage {
-
     private final String
             SEARCH_URL = "ru-ru/search";
     private final SelenideElement
             searchButton = $("[title='Поиск по сайту']"),
-            input = $("#search"),
+            inputButton = $("#search"),
             result = $("#ya-site-results");
-
 
     public SearchPage buttonSearch() {
         searchButton.click();
@@ -31,7 +29,7 @@ public class SearchPage {
     }
 
     public SearchPage sectionInput(String value) {
-        input.setValue(value).pressEnter();
+        inputButton.setValue(value).pressEnter();
 
         return this;
     }
@@ -41,5 +39,4 @@ public class SearchPage {
 
         return this;
     }
-
 }

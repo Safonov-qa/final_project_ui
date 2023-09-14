@@ -16,11 +16,9 @@ import static io.qameta.allure.Allure.step;
 @Feature("UI тесты на проверку содержания разделов сайта Аэрофлот")
 @DisplayName("Страница поиска")
 @Tag("search_page_test")
-
 public class SearchPageTest extends TestBase{
     MainPage mainPage = new MainPage();
     SearchPage searchPage = new SearchPage();
-
 
     @DisplayName("Результат поиска содержит текст поискового запроса")
     @ValueSource(strings = {"Багаж", "Аэропорт", "Цены"})
@@ -38,7 +36,5 @@ public class SearchPageTest extends TestBase{
                 searchPage.sectionInput(value));
         step("Проверить результат поиска", () ->
                 searchPage.resultPage());
-
     }
-
 }

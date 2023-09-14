@@ -82,10 +82,7 @@
 
 
 <a id="jenkins"></a>
-## <img src="media/logo/Jenkins.svg" width="25" height="25"/></a> Запуск тестов в Jenkins
-
-<a target="_blank" href="https://jenkins.autotests.cloud/job/final_project_ui/ ">Сборка в Jenkins</a>
-<p align="center">
+## <img src="media/logo/Jenkins.svg" width="25" height="25"/></a> Запуск тестов в [Jenkins](https://jenkins.autotests.cloud/job/final_project_ui/)
 
 <p align="center">
 <a><img title="Jenkins Job" src="media/screenshots/JenkinsMain.png" alt="Jenkins"/></a>
@@ -101,7 +98,7 @@
 Из Jenkins возмжно перейти в Allure Report и Allure TestOps.
 
 <a id="allure"></a>
-## <img src="media/logo/Allure_Report.svg" width="25" height="25"/></a> Отчеты в [Allure Report](https://jenkins.autotests.cloud/job/Students/job/final_project_ui_test/21/allure/)
+## <img src="media/logo/Allure_Report.svg" width="25" height="25"/></a> Отчеты в [Allure Report](https://jenkins.autotests.cloud/job/final_project_ui/allure/)
 
 ### Главная страница
 

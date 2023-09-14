@@ -15,7 +15,6 @@ import static io.qameta.allure.Allure.step;
 @Feature("UI тесты на проверку содержания разделов сайта Аэрофлот")
 @DisplayName("Страница контактов")
 @Tag("contacts_page_test")
-
 public class ContactsPageTest extends TestBase {
     MainPage mainPage = new MainPage();
     ContactsPage contactsPage = new ContactsPage();
@@ -61,7 +60,5 @@ public class ContactsPageTest extends TestBase {
                 contactsPage.clickToButtonCross());
         step("Проверка наличия офисов", () ->
                 contactsPage.checkOfficeInSelectTown());
-
     }
-
 }

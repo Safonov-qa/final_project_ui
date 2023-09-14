@@ -13,7 +13,6 @@ import static io.qameta.allure.Allure.step;
 @Feature("UI тесты на проверку содержания разделов сайта Аэрофлот")
 @DisplayName("Главная страница")
 @Tag("main_page_test")
-
 public class MainPageTests extends TestBase {
     MainPage mainPage = new MainPage();
 
@@ -21,54 +20,48 @@ public class MainPageTests extends TestBase {
     public void openMainPage() {
         step("Открыть главную страницу", () ->
                 mainPage.openMain());
-    }
-    @BeforeEach
-    public void closePopUpWindow() {
         step("Закрыть всплывающее окно", () ->
         mainPage.closeWindow());
     }
 
     @Test
-    @DisplayName("Проверка содержания главной страницы")
+    @DisplayName("Содержание главной страницы")
     void mainPageContentTest() {
-        step("Отображение логотипа компании", () ->
+        step("Проверка отображения логотипа компании", () ->
                 mainPage.checkLogoCompany());
-        step("Отображение хедеров", () ->
+        step("Проверка отображения хедеров", () ->
                 mainPage.checkHeaders());
-        step("Отобржение основного модуля", () ->
+        step("Проверка отображения основного модуля", () ->
                 mainPage.checkMainModule());
-        step("Отображение блока дополнительных сервисов", () ->
+        step("Проверка отображения блока дополнительных сервисов", () ->
                 mainPage.checkBlockOfService());
-        step("Отображение специальные предложения", () ->
+        step("Проверка отображения специальные предложения", () ->
                 mainPage.checkSpecialOffer());
-        step("Отображение Дополнительные услуги", () ->
+        step("Проверка отображения Дополнительные услуги", () ->
                 mainPage.checkAdditionalServices());
-        step("Отображение блока 'Компания Аэрофлот'", () ->
+        step("Проверка отображения блока 'Компания Аэрофлот'", () ->
                 mainPage.checkBlockCompany());
-        step("Новости", () ->
+        step("Проверка отображения Новости", () ->
                 mainPage.checkNews());
-        step("Эксклюзив", () ->
+        step("Проверка отображения Эксклюзив", () ->
                 mainPage.checkExclusive());
-        step("Нижнее меню", () ->
+        step("Проверка отображения Нижнее меню", () ->
                 mainPage.checkDownMenu());
-
     }
 
     @Test
-    @DisplayName("Проверка всплвающих окон в хедере")
+    @DisplayName("Всплвающие окна в хедере")
     void checkHeader() {
-        step("Отображение сервисы и услуги", () ->
+        step("Проверка отображения сервисы и услуги", () ->
                 mainPage.checkService());
-        step("Отображение спецпредложений", () ->
+        step("Проверка отображения спецпредложений", () ->
                 mainPage.checkWindowSpecialOffer());
-        step("Аэрофлот бонус", () ->
+        step("Проверка отображения Аэрофлот бонус", () ->
                 mainPage.checkAeroFlotBonus());
-        step("Информация", () ->
+        step("Проверка отображения Информация", () ->
                 mainPage.checkInformation());
-        step("Для бизнеса", () ->
+        step("Проверка отображения Для бизнеса", () ->
                 mainPage.checkForBusiness());
-
     }
-
 }
 

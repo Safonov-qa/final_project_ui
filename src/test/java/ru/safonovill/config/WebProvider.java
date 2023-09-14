@@ -2,10 +2,13 @@ package ru.safonovill.config;
 
 import com.codeborne.selenide.Configuration;
 import org.aeonbits.owner.ConfigFactory;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
-public class WebDriverProvider {
+import java.util.Map;
 
-    static WebDriverConfig config = ConfigFactory.create(WebDriverConfig.class, System.getProperties());
+public class WebProvider {
+
+    static WebConfig config = ConfigFactory.create(WebConfig.class, System.getProperties());
 
     public static void configuration() {
         Configuration.baseUrl = config.getBaseUrl();
@@ -15,6 +18,12 @@ public class WebDriverProvider {
         String remoteUrl = config.getRemoteUrl();
         if (remoteUrl != null) {
             Configuration.remote = remoteUrl;
+            DesiredCapabilities capabilities = new DesiredCapabilities();
+            capabilities.setCapability("selenoid:options", Map.<String, Object>of(
+                    "enableVNC", true,
+                    "enableVideo", true
+            ));
+            Configuration.browserCapabilities = capabilities;
         }
     }
 }

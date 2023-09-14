@@ -10,35 +10,34 @@ public class BuyTicketPage {
     private final String DATE_FROM = "10.11.2023";
     private final String DATE_TO = "10.12.2023";
     private final SelenideElement
-            ticketMenu = $("#adaptive-tabs_0"),
-            fromFly = $("#ticket-city-departure-0-booking"),
-            toFly = $("#ticket-city-arrival-0-booking"),
-            dateFrom = $("#ticket-date-from-booking"),
-            dateTo = $("#ticket-date-to-booking"),
-            numberOfPassengersButton = $("#ticket-class-service-booking"),//.select_classsearch-form-1
-            addPassenger = $("[aria-label='Добавить пассажира']"),
+            ticketMenuButton = $("#adaptive-tabs_0"),
+            fromFlyWindow = $("#ticket-city-departure-0-booking"),
+            toFlyWindow = $("#ticket-city-arrival-0-booking"),
+            dateFromWindow = $("#ticket-date-from-booking"),
+            dateToWindow = $("#ticket-date-to-booking"),
+            numberOfPassengersButton = $("#ticket-class-service-booking"),
+            addPassengerButton = $("[aria-label='Добавить пассажира']"),
             closeButton = $(".main-module__button.main-module__button--wide.main-module__js-dropdown-close"),
             searchButton = $(".main-module__button.main-module__button--wide.main-module__button--lg.ignore-disabled-click"),
-            resultSearch = $(".frame.flight-searchs.js-tariff-helper.h-pb--0");
+            resultSearchWindow = $(".frame.flight-searchs.js-tariff-helper.h-pb--0");
 
     public BuyTicketPage checkMenuByToTicket() {
-        ticketMenu.shouldBe(visible);
+        ticketMenuButton.shouldBe(visible);
 
         return this;
     }
 
     public BuyTicketPage checkSearchTicket(String to) {
-        fromFly.doubleClick().setValue(DEPARTURE_CITY);
-        toFly.doubleClick().setValue(to);
-        dateFrom.doubleClick().setValue(DATE_FROM);
-        dateTo.doubleClick().setValue(DATE_TO).pressEnter();
+        fromFlyWindow.doubleClick().setValue(DEPARTURE_CITY);
+        toFlyWindow.doubleClick().setValue(to);
+        dateFromWindow.doubleClick().setValue(DATE_FROM);
+        dateToWindow.doubleClick().setValue(DATE_TO).pressEnter();
         numberOfPassengersButton.click();
-        addPassenger.click();
+        addPassengerButton.click();
         closeButton.click();
         searchButton.click();
-        resultSearch.shouldBe(visible);
+        resultSearchWindow.shouldBe(visible);
 
         return this;
     }
-
 }

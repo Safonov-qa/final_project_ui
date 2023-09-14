@@ -21,27 +21,20 @@ repositories {
     mavenCentral()
 }
 
-
 dependencies {
     testImplementation (
             'org.junit.jupiter:junit-jupiter:5.10.0',
             'com.codeborne:selenide:6.16.1',
             'io.qameta.allure:allure-selenide:2.24.0',
             'org.slf4j:slf4j-simple:2.0.6',
-            "com.github.javafaker:javafaker:1.0.2",
-            'com.google.code.gson:gson:2.10.1',
-            'com.fasterxml.jackson.core:jackson-databind:2.14.2',
             'org.aeonbits.owner:owner:1.0.4',
             'org.aspectj:aspectjweaver:1.9.20.1'
-
     )
-
 }
 
 tasks.withType(JavaCompile).configureEach {
     options.encoding = "UTF-8"
 }
-
 
 tasks.withType(Test) {
     useJUnitPlatform()

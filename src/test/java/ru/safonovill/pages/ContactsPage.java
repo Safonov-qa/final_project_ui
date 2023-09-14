@@ -2,7 +2,6 @@ package ru.safonovill.pages;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
-import ru.safonovill.tests.TestBase;
 
 import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Selectors.byXpath;
@@ -14,19 +13,18 @@ public class ContactsPage {
             CONTACTS_URL = "ru-ru/about/contact",
             OFFICES_URL = "ru-ru/offices";
     private final SelenideElement
-            contacts = $(".main-module__footer__link.main-module__footer__submenu-item-link"),
+            contactsButton = $(".main-module__footer__link.main-module__footer__submenu-item-link"),
             iconContacts = $("[href='https://www.aeroflot.ru/ru-ru/about/contact']"),
             iconOffices = $("[src='/media/page_icons/offices_OYSZY73.svg']"),
             buttonCross = $(".main-module__button.main-module__button--wide.main-module__button--lg"),
-            selectTown = $("[itemprop='streetAddress']"),
+            selectTownButton = $("[itemprop='streetAddress']"),
             buttonToBack = $(".main-module__text.main-module__h-mb--24.main-module__h-display--inline-block"),
             anotherCity = $(".main-module__input__text", 1),
             stPetersBurg = $(byXpath("//*[text()='Санкт-Петербург']")),
             abakan = $(byXpath("//*[text()='Абакан']"));
 
-
     public ContactsPage scrollToContacts() {
-        contacts.scrollTo();
+        contactsButton.scrollTo();
 
         return this;
     }
@@ -62,7 +60,7 @@ public class ContactsPage {
     }
 
     public ContactsPage checkOfficeInSelectTown() {
-        selectTown.shouldBe(Condition.visible);
+        selectTownButton.shouldBe(Condition.visible);
 
         return this;
     }
@@ -84,7 +82,6 @@ public class ContactsPage {
 
         return this;
     }
-
 
     public ContactsPage chooseAbakan() {
         abakan.click();
